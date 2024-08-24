@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     console.log("Hello World");
 });
 
-mongoose.connect(process.env.MONGO_URL).then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to Database!");
     app.listen(process.env.PORT, () => {
         console.log(`Server is listening to ${process.env.PORT}`);
